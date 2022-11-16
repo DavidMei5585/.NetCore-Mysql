@@ -1,0 +1,25 @@
+﻿@using Wytn.Sys.Model.Dto
+@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Environment:@ViewBag.Env </h1>
+
+    @for (var i = 0;  i < @ViewBag.code.Count; i++)
+    {
+        var obj = @ViewBag.code[i];
+        <label></label>
+        <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title @i</h5>
+                <p class="card-text">@(obj?.codeName)</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>
+    }
+

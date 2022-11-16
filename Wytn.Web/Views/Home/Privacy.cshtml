@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>上傳檔案測試</h1>
+@using (Html.BeginForm("Import", "Home", FormMethod.Post, new { enctype = "multipart/form-data" })) 
+    {
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <label class="col-md-2 text-md-right col-form-label">檔案匯入：</label>
+                <div class="col-md-10">
+                    <input class="form-control-file mt-1" name="file" type="file" accept=".xlsx,.xls" />
+                </div>
+            </div>
+
+            <br />
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">匯入</button>
+            </div>
+        </div>
+    </div>
+    }
